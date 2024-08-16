@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #4a148c; /* Purple accent */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -63,7 +63,7 @@ ul li:hover {
 }
 
 a {
-    color: #333;
+    color: #4a148c; /* Purple accent for links */
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
@@ -73,7 +73,7 @@ a:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: #4a148c; /* Purple accent for footer */
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -124,4 +124,18 @@ footer {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+/* Subtle animation for moving elements around */
+@keyframes subtleMove {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+h1, h2 {
+    animation: subtleMove 3s ease-in-out infinite; /* Apply subtle animation */
 }
