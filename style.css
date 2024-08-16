@@ -15,6 +15,7 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 h1 {
@@ -29,16 +30,20 @@ p {
 .container {
     width: 80%;
     margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
 }
 
 section {
     padding: 30px 0;
+    opacity: 0;
+    animation: slideInUp 1s ease-out forwards;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2rem;
+    animation: bounceIn 1s ease-in-out;
 }
 
 ul {
@@ -49,15 +54,22 @@ ul {
 ul li {
     font-size: 1.2rem;
     margin: 10px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+ul li:hover {
+    color: #ff6347; /* Cool color change on hover */
+    cursor: pointer;
 }
 
 a {
     color: #333;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #555;
+    color: #ff6347; /* Cool hover effect on links */
 }
 
 footer {
@@ -68,4 +80,48 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
